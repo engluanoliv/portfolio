@@ -20,7 +20,8 @@
 			},
 			"style": {
 				"recommended": true,
-				"useBlockStatements": "error"
+				"useBlockStatements": "error",
+				"sort-classes": "error"
 			}
 		}
 	},
