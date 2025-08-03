@@ -1,19 +1,20 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Luan',
-  description: 'My Personal Portfolio',
-}
+	icons: [{ url: "./avatar.svg" }],
+	title: "Chico Luan",
+	description: "My Personal Portfolio",
+};
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang='en'>
-      <body>{children}</body>
-    </html>
-  )
+	return (
+		<html lang="en">
+			<body>{children}</body>
+		</html>
+	);
 }
