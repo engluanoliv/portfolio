@@ -33,7 +33,7 @@ export const DOCK_DATA: DockDataType = {
       Linkedin: {
         name: 'Linkedin',
         url: 'https://www.linkedin.com/in/engluanoliv/',
-        icon: LinkedIn,
+        icon: 'LinkedIn',
       },
       // Email: {
       // 	name: "Send Email",
