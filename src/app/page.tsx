@@ -11,40 +11,12 @@ import {
 	AvatarImage,
 } from "@/ui/shadcn/components/ui/avatar";
 import { Separator } from "@/ui/shadcn/components/ui/separator";
+import CardAbout from "@/components/card-about/card-about";
 
 export default function Home() {
 	return (
-		<div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-			<main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-				{/* <SmoothCursor /> */}
-				<div className="relative">
-					<Dock direction="middle">
-						<DockIcon>
-							<Link href={"/"}>
-								<Avatar>
-									<AvatarImage src={"./avatar.svg"} />
-									<AvatarFallback>CL</AvatarFallback>
-								</Avatar>
-							</Link>
-						</DockIcon>
-						<Separator orientation="vertical" className="h-full" />
-						{Object.entries(DOCK_DATA.contact.social).map(([name, social]) => (
-							<DockIcon key={name}>
-								<Link
-									target="_blank"
-									href={social.url}
-									className={cn(
-										buttonVariants({ variant: "ghost", size: "icon" }),
-										"size-12 rounded-full",
-									)}
-								>
-									<social.icon className="size-6" />
-								</Link>
-							</DockIcon>
-						))}
-					</Dock>
-				</div>
-			</main>
-		</div>
+		<>
+			<CardAbout />
+		</>
 	);
 }
