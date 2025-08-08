@@ -13,7 +13,7 @@ export default function CardAbout(): JSX.Element {
 		<>
 			<CometCard>
 				<div
-					className="flex w-80 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:p-4"
+					className="flex w-[322px] h-[464px] cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:p-4"
 					aria-label="View invite F7RA"
 					style={{
 						transformStyle: "preserve-3d",

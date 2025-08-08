@@ -1,22 +1,13 @@
-import DynamicIcon from "@/ui/shadcn/components/ui/dynamic-icon";
-import { Dock, DockIcon } from "@/ui/shadcn/components/magicui/dock";
-import Link from "next/link";
-import { DOCK_DATA } from "./data";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/ui/shadcn/components/ui/button";
-import { SmoothCursor } from "@/ui/shadcn/components/ui/smooth-cursor";
-import {
-	Avatar,
-	AvatarFallback,
-	AvatarImage,
-} from "@/ui/shadcn/components/ui/avatar";
-import { Separator } from "@/ui/shadcn/components/ui/separator";
-import CardAbout from "@/components/card-about/card-about";
+import { ContainerTextFlip } from "@/components/container-text-flip/container-text-flip";
 
 export default function Home() {
 	return (
-		<>
-			<CardAbout />
-		</>
+		<div className="w-full">
+			<p className="text-xl md:text-4xl font-medium w-full">Hello, I am a</p>
+			<ContainerTextFlip
+				words={["Software Engineer", "UI/UX Design", "Frontend Developer"]}
+			/>
+			{/* <CardAbout /> */}
+		</div>
 	);
 }

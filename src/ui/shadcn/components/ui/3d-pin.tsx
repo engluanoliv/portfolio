@@ -30,7 +30,7 @@ export const PinContainer = ({
 	return (
 		<div
 			className={cn(
-				"relative group/pin z-50  cursor-pointer",
+				"w-[322px] h-[464px] relative group/pin z-50 cursor-pointer",
 				containerClassName,
 			)}
 			onMouseEnter={onMouseEnter}
@@ -42,15 +42,22 @@ export const PinContainer = ({
 					perspective: "1000px",
 					transform: "rotateX(70deg) translateZ(0deg)",
 				}}
-				className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
+				className="w-[322px] h-[464px] absolute left-1/2 top-1/2 ml-[0.09375rem] -translate-x-1/2 -translate-y-1/2"
 			>
 				<div
 					style={{
 						transform: transform,
 					}}
-					className="absolute left-1/2 p-0 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-blue-200 border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+					className="absolute left-1/2 p-0 top-1/2 w-[322px] h-[464px] aspect-[3/4] flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-blue-200 border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
 				>
-					<div className={cn(" relative z-50 ", className)}>{children}</div>
+					<div
+						className={cn(
+							" relative z-50 w-[322px] h-[464px] aspect-[3/4]  ",
+							className,
+						)}
+					>
+						{children}
+					</div>
 				</div>
 			</div>
 			<PinPerspective title={title} href={href} />
@@ -66,9 +73,9 @@ export const PinPerspective = ({
 	href?: string;
 }) => {
 	return (
-		<motion.div className="pointer-events-none  w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
-			<div className=" w-full h-full -mt-7 flex-none  inset-0">
-				<div className="absolute top-0 inset-x-0  flex justify-center">
+		<motion.div className="pointer-events-none !w-[322px] h-[464px] aspect-[3/4] flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+			<div className="w-full h-full flex-none  inset-0">
+				<div className="hidden hover:flex absolute top-0 inset-x-0 justify-center">
 					<a
 						href={href}
 						target={"_blank"}
