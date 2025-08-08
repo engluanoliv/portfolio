@@ -22,6 +22,7 @@ export default function Template({
           transformStyle: 'preserve-3d',
           perspective: 1200,
           backfaceVisibility: 'hidden',
+          marginInline: 'auto',
         }}
       >
         {children}
