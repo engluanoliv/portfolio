@@ -1,23 +1,16 @@
-import {
-  CardBody,
-  CardContainer,
-  CardItem,
-} from '@/ui/shadcn/components/ui/3d-card'
 import { CometCard } from '@/ui/shadcn/components/ui/comet-card'
-import { MapPin } from 'lucide-react'
-import Link from 'next/link'
-import { JSX } from 'react'
+import type { JSX } from 'react'
 
 export default function CardAbout(): JSX.Element {
   return (
     <>
       <CometCard>
         <div
-          className='flex w-[322px] h-[464px] cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:p-4'
+          className='flex h-[464px] w-[322px] cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:p-4'
           aria-label='View invite F7RA'
           style={{
             transformStyle: 'preserve-3d',
-            transform: 'none',
+            // transform: 'none',
             opacity: 1,
           }}
         >
@@ -37,7 +30,7 @@ export default function CardAbout(): JSX.Element {
           </div>
           <div className='mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white'>
             <div className='text-xs'>Comet Invitation</div>
-            <div className='text-xs text-gray-300 opacity-50'>#F7RA</div>
+            <div className='text-gray-300 text-xs opacity-50'>#F7RA</div>
           </div>
         </div>
       </CometCard>

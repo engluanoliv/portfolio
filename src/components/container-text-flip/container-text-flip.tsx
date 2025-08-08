@@ -60,7 +60,7 @@ export function ContainerTextFlip({
       animate={{ width }}
       transition={{ duration: animationDuration / 2000 }}
       className={cn(
-        'relative inline-block rounded-lg pt-2 pb-3 text-center text-4xl font-bold text-black md:text-7xl dark:text-white',
+        'relative inline-block rounded-lg pt-2 pb-3 text-center font-bold text-4xl text-black dark:text-white md:text-7xl',
         '[background:linear-gradient(to_bottom,#f3f4f6,#e5e7eb)]',
         'shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db]',
         'dark:[background:linear-gradient(to_bottom,#374151,#1f2937)]',
@@ -81,6 +81,7 @@ export function ContainerTextFlip({
         <motion.div className='inline-block'>
           {words[currentWordIndex].split('').map((letter, index) => (
             <motion.span
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               key={index}
               initial={{
                 opacity: 0,

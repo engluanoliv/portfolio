@@ -4,7 +4,9 @@ import CardAbout from '@/components/card-about/card-about'
 export default function AboutPage() {
   return (
     <>
-      <CardAbout />
+      <div className='mx-auto flex w-full items-center justify-center'>
+        <CardAbout />
+      </div>
     </>
   )
 }

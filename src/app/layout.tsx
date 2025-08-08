@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { SmoothCursor } from '@/ui/shadcn/components/ui/smooth-cursor'
+// import { SmoothCursor } from '@/ui/shadcn/components/ui/smooth-cursor'
 import DockerMenu from '@/components/docker-menu/docker-menu'
-import Transition from '@/components/transition/transition'
+// import Template from './template'
 
 export const metadata: Metadata = {
   icons: [{ url: './avatar.svg' }],
@@ -18,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <SmoothCursor />
-        <div className='font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
-          <main className='flex flex-col gap-[32px] row-start-2 items-center sm:items-start'>
+        {/* <SmoothCursor /> */}
+
+        <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center gap-16 p-8 pb-20 font-sans sm:p-20'>
+          <main className='row-start-2 flex flex-col items-center justify-center gap-[32px] sm:items-start'>
+            {/* <Template>{children}</Template> */}
             {children}
             <DockerMenu />
           </main>
