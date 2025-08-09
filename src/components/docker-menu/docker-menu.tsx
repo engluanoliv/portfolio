@@ -11,6 +11,7 @@ import {
 import { buttonVariants } from '@/ui/shadcn/components/ui/button'
 import { Navigation } from '@/ui/shadcn/components/ui/icon'
 import { Separator } from '@/ui/shadcn/components/ui/separator'
+import { Download } from 'lucide-react'
 import Link from 'next/link'
 import type { JSX } from 'react'
 
@@ -32,6 +33,19 @@ export default function DockerMenu(): JSX.Element {
           </Link>
         </DockIcon>
         <Separator orientation='vertical' className='h-full' />
+
+        <DockIcon>
+          <a
+            href='./my-cv.pdf'
+            download
+            className={cn(
+              buttonVariants({ variant: 'ghost', size: 'icon' }),
+              'size-12 rounded-full',
+            )}
+          >
+            <Download className='size-6' />
+          </a>
+        </DockIcon>
         {Object.entries(DOCK_DATA.contact.social).map(([name, social]) => (
           <DockIcon key={name}>
             <Link
